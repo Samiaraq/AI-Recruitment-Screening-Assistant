@@ -1,0 +1,7 @@
+venv/
+.env
+credentials.json
+token.json
+matched_cvs_temp/
+--pycache--/
+*.py[cod]
