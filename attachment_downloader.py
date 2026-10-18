@@ -88,7 +88,7 @@ def save_attachment(message_id, attachment, output_dir="matched_cvs_temp"):
     output_path.mkdir(parents=True, exist_ok=True)
 
     filename = Path(attachment["filename"]).name
-    save_path = output_path / filename
+    save_path = output_path /f"{message_id}_{filename}"
 
     if save_path.exists():
         print(f"File already exists, skipping: {save_path}")

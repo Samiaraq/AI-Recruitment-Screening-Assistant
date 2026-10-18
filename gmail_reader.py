@@ -4,14 +4,14 @@ from gmail_service import get_gmail_service
 def search_emails(query, max_results=5):
     """Search Gmail using Gmail search syntax."""
     service = get_gmail_service()
-
+    print("connected successfully")
     response = (
         service.users()
         .messages()
         .list(
             userId="me",
             q=query,
-            maxResults=max_results,
+            maxResults=max_results
         )
         .execute()
     )
